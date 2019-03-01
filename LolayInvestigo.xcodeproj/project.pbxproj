@@ -18,9 +18,6 @@
 		4E2B43A02228CD6600CF2296 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B43982228CD6600CF2296 /* nanopb.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4E2B43A12228CD6600CF2296 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B43992228CD6600CF2296 /* FirebaseAnalytics.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4E2B43A22228CD6600CF2296 /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B439A2228CD6600CF2296 /* FirebaseCoreDiagnostics.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		4E2B43A72228CD9E00CF2296 /* FirebaseCrash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B43A42228CD9E00CF2296 /* FirebaseCrash.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		4E2B43A82228CD9E00CF2296 /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B43A52228CD9E00CF2296 /* Protobuf.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		4E2B43A92228CD9E00CF2296 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B43A62228CD9E00CF2296 /* GoogleToolboxForMac.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4E2B43AC2228CFA000CF2296 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B43AB2228CFA000CF2296 /* libsqlite3.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4E2B43AE2228CFAC00CF2296 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B43AD2228CFAB00CF2296 /* libz.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4E2B43B02228CFB600CF2296 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B43AF2228CFB600CF2296 /* Security.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -37,6 +34,12 @@
 		4E6AAE152229077500EA9CFF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 4E6AAE142229077500EA9CFF /* LICENSE */; };
 		4E6AAE172229078A00EA9CFF /* README in Resources */ = {isa = PBXBuildFile; fileRef = 4E6AAE162229078A00EA9CFF /* README */; };
 		4E6AAE1922290CFD00EA9CFF /* LolayMultipleTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AAE1822290CFD00EA9CFF /* LolayMultipleTrackerTests.swift */; };
+		4E6AAE1B2229103900EA9CFF /* LolayFirebaseTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AAE1A2229103900EA9CFF /* LolayFirebaseTracker.swift */; };
+		4E6AAE1D2229199E00EA9CFF /* LolayCrashlyticsTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AAE1C2229199E00EA9CFF /* LolayCrashlyticsTracker.swift */; };
+		4E6AAE2322291BE500EA9CFF /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E6AAE2122291BE500EA9CFF /* Fabric.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4E6AAE2422291BE500EA9CFF /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E6AAE2222291BE500EA9CFF /* Crashlytics.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4E6AAE2922291F9A00EA9CFF /* LolayFirebaseTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AAE2822291F9A00EA9CFF /* LolayFirebaseTrackerTests.swift */; };
+		4E6AAE2B2229201B00EA9CFF /* LolayCrashlyticsTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AAE2A2229201B00EA9CFF /* LolayCrashlyticsTracker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,9 +67,6 @@
 		4E2B43982228CD6600CF2296 /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = nanopb.framework; sourceTree = "<group>"; };
 		4E2B43992228CD6600CF2296 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
 		4E2B439A2228CD6600CF2296 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
-		4E2B43A42228CD9E00CF2296 /* FirebaseCrash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCrash.framework; sourceTree = "<group>"; };
-		4E2B43A52228CD9E00CF2296 /* Protobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Protobuf.framework; sourceTree = "<group>"; };
-		4E2B43A62228CD9E00CF2296 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = "<group>"; };
 		4E2B43AA2228CF1C00CF2296 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		4E2B43AB2228CFA000CF2296 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		4E2B43AD2228CFAB00CF2296 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -84,6 +84,12 @@
 		4E6AAE142229077500EA9CFF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		4E6AAE162229078A00EA9CFF /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		4E6AAE1822290CFD00EA9CFF /* LolayMultipleTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolayMultipleTrackerTests.swift; sourceTree = "<group>"; };
+		4E6AAE1A2229103900EA9CFF /* LolayFirebaseTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolayFirebaseTracker.swift; sourceTree = "<group>"; };
+		4E6AAE1C2229199E00EA9CFF /* LolayCrashlyticsTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolayCrashlyticsTracker.swift; sourceTree = "<group>"; };
+		4E6AAE2122291BE500EA9CFF /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		4E6AAE2222291BE500EA9CFF /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		4E6AAE2822291F9A00EA9CFF /* LolayFirebaseTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolayFirebaseTrackerTests.swift; sourceTree = "<group>"; };
+		4E6AAE2A2229201B00EA9CFF /* LolayCrashlyticsTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolayCrashlyticsTracker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,15 +107,14 @@
 				4E2B43AC2228CFA000CF2296 /* libsqlite3.tbd in Frameworks */,
 				4E2B439B2228CD6600CF2296 /* GoogleAppMeasurement.framework in Frameworks */,
 				4E2B439C2228CD6600CF2296 /* FirebaseInstanceID.framework in Frameworks */,
+				4E6AAE2422291BE500EA9CFF /* Crashlytics.framework in Frameworks */,
 				4E2B439E2228CD6600CF2296 /* GoogleUtilities.framework in Frameworks */,
 				4E2B439F2228CD6600CF2296 /* FIRAnalyticsConnector.framework in Frameworks */,
 				4E2B43A12228CD6600CF2296 /* FirebaseAnalytics.framework in Frameworks */,
-				4E2B43A92228CD9E00CF2296 /* GoogleToolboxForMac.framework in Frameworks */,
 				4E2B43A22228CD6600CF2296 /* FirebaseCoreDiagnostics.framework in Frameworks */,
 				4E2B43A02228CD6600CF2296 /* nanopb.framework in Frameworks */,
-				4E2B43A82228CD9E00CF2296 /* Protobuf.framework in Frameworks */,
+				4E6AAE2322291BE500EA9CFF /* Fabric.framework in Frameworks */,
 				4E2B439D2228CD6600CF2296 /* FirebaseCore.framework in Frameworks */,
-				4E2B43A72228CD9E00CF2296 /* FirebaseCrash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +160,8 @@
 				4E2B43C12228E47500CF2296 /* LolayBaseTracker.swift */,
 				4E2B43C32228EAFE00CF2296 /* LolayOSLogTracker.swift */,
 				4E2B43C92228F83C00CF2296 /* LolayMultipleTracker.swift */,
+				4E6AAE1A2229103900EA9CFF /* LolayFirebaseTracker.swift */,
+				4E6AAE1C2229199E00EA9CFF /* LolayCrashlyticsTracker.swift */,
 			);
 			path = LolayInvestigo;
 			sourceTree = "<group>";
@@ -165,6 +172,8 @@
 				4E2B43412228C15400CF2296 /* Info.plist */,
 				4E2B43C52228F04400CF2296 /* LolayOSLogTrackerTests.swift */,
 				4E6AAE1822290CFD00EA9CFF /* LolayMultipleTrackerTests.swift */,
+				4E6AAE2822291F9A00EA9CFF /* LolayFirebaseTrackerTests.swift */,
+				4E6AAE2A2229201B00EA9CFF /* LolayCrashlyticsTracker.swift */,
 			);
 			path = LolayInvestigoTests;
 			sourceTree = "<group>";
@@ -190,7 +199,7 @@
 			children = (
 				4E2B43AA2228CF1C00CF2296 /* module.modulemap */,
 				4E2B43922228CD4400CF2296 /* Analytics */,
-				4E2B43A32228CD6D00CF2296 /* Crash */,
+				4E6AAE2022291BE500EA9CFF /* Crashlytics */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -210,14 +219,13 @@
 			path = Analytics;
 			sourceTree = "<group>";
 		};
-		4E2B43A32228CD6D00CF2296 /* Crash */ = {
+		4E6AAE2022291BE500EA9CFF /* Crashlytics */ = {
 			isa = PBXGroup;
 			children = (
-				4E2B43A42228CD9E00CF2296 /* FirebaseCrash.framework */,
-				4E2B43A62228CD9E00CF2296 /* GoogleToolboxForMac.framework */,
-				4E2B43A52228CD9E00CF2296 /* Protobuf.framework */,
+				4E6AAE2122291BE500EA9CFF /* Fabric.framework */,
+				4E6AAE2222291BE500EA9CFF /* Crashlytics.framework */,
 			);
-			path = Crash;
+			path = Crashlytics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,11 +339,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E6AAE1B2229103900EA9CFF /* LolayFirebaseTracker.swift in Sources */,
 				4E2B43C22228E47500CF2296 /* LolayBaseTracker.swift in Sources */,
 				4E2B437E2228C57B00CF2296 /* LolayTracker.swift in Sources */,
 				4E2B43C02228E44500CF2296 /* LolayNoTracker.swift in Sources */,
 				4E2B43CA2228F83C00CF2296 /* LolayMultipleTracker.swift in Sources */,
 				4E2B43C42228EAFE00CF2296 /* LolayOSLogTracker.swift in Sources */,
+				4E6AAE1D2229199E00EA9CFF /* LolayCrashlyticsTracker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,7 +353,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E6AAE2922291F9A00EA9CFF /* LolayFirebaseTrackerTests.swift in Sources */,
 				4E6AAE1922290CFD00EA9CFF /* LolayMultipleTrackerTests.swift in Sources */,
+				4E6AAE2B2229201B00EA9CFF /* LolayCrashlyticsTracker.swift in Sources */,
 				4E2B43C62228F04400CF2296 /* LolayOSLogTrackerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +409,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "${SRCROOT}/Frameworks/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -415,6 +428,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -461,6 +475,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "${SRCROOT}/Frameworks/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -472,6 +487,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -491,7 +507,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "Frameworks/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/Firebase/Crashlytics",
+				);
 				INFOPLIST_FILE = LolayInvestigo/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -499,7 +518,6 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = org.lolay.LolayInvestigo;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -519,7 +537,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "Frameworks/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/Firebase/Crashlytics",
+				);
 				INFOPLIST_FILE = LolayInvestigo/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -527,7 +548,6 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = org.lolay.LolayInvestigo;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
