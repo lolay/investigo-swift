@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4E2B433B2228C15400CF2296 /* LolayInvestigo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B43312228C15400CF2296 /* LolayInvestigo.framework */; };
+		4E2B43422228C15400CF2296 /* LolayInvestigo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E2B43342228C15400CF2296 /* LolayInvestigo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E2B437E2228C57B00CF2296 /* LolayTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B437D2228C57B00CF2296 /* LolayTracker.swift */; };
+		4E2B439B2228CD6600CF2296 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B43932228CD6600CF2296 /* GoogleAppMeasurement.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4E2B439C2228CD6600CF2296 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B43942228CD6600CF2296 /* FirebaseInstanceID.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4E2B439D2228CD6600CF2296 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B43952228CD6600CF2296 /* FirebaseCore.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4E2B439E2228CD6600CF2296 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B43962228CD6600CF2296 /* GoogleUtilities.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4E2B439F2228CD6600CF2296 /* FIRAnalyticsConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B43972228CD6600CF2296 /* FIRAnalyticsConnector.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4E2B43A02228CD6600CF2296 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B43982228CD6600CF2296 /* nanopb.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4E2B43A12228CD6600CF2296 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B43992228CD6600CF2296 /* FirebaseAnalytics.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4E2B43A22228CD6600CF2296 /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B439A2228CD6600CF2296 /* FirebaseCoreDiagnostics.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4E2B43A72228CD9E00CF2296 /* FirebaseCrash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B43A42228CD9E00CF2296 /* FirebaseCrash.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4E2B43A82228CD9E00CF2296 /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B43A52228CD9E00CF2296 /* Protobuf.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4E2B43A92228CD9E00CF2296 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B43A62228CD9E00CF2296 /* GoogleToolboxForMac.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4E2B43AC2228CFA000CF2296 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B43AB2228CFA000CF2296 /* libsqlite3.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4E2B43AE2228CFAC00CF2296 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B43AD2228CFAB00CF2296 /* libz.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4E2B43B02228CFB600CF2296 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B43AF2228CFB600CF2296 /* Security.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4E2B43B22228CFC400CF2296 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B43B12228CFC400CF2296 /* StoreKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4E2B43B42228CFCF00CF2296 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B43B32228CFCF00CF2296 /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4E2B43B62228CFDA00CF2296 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B43B52228CFD900CF2296 /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4E2B43B82228D01F00CF2296 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B43B72228D01F00CF2296 /* libc++.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4E2B43BA2228D02A00CF2296 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B43B92228D02A00CF2296 /* CoreTelephony.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4E2B43C02228E44500CF2296 /* LolayNoTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B43BF2228E44500CF2296 /* LolayNoTracker.swift */; };
+		4E2B43C22228E47500CF2296 /* LolayBaseTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B43C12228E47500CF2296 /* LolayBaseTracker.swift */; };
+		4E2B43C42228EAFE00CF2296 /* LolayOSLogTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B43C32228EAFE00CF2296 /* LolayOSLogTracker.swift */; };
+		4E2B43C62228F04400CF2296 /* LolayOSLogTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B43C52228F04400CF2296 /* LolayOSLogTrackerTests.swift */; };
+		4E2B43CA2228F83C00CF2296 /* LolayMultipleTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B43C92228F83C00CF2296 /* LolayMultipleTracker.swift */; };
+		4E6AAE152229077500EA9CFF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 4E6AAE142229077500EA9CFF /* LICENSE */; };
+		4E6AAE172229078A00EA9CFF /* README in Resources */ = {isa = PBXBuildFile; fileRef = 4E6AAE162229078A00EA9CFF /* README */; };
+		4E6AAE1922290CFD00EA9CFF /* LolayMultipleTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AAE1822290CFD00EA9CFF /* LolayMultipleTrackerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4E2B433C2228C15400CF2296 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E2B43282228C15400CF2296 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E2B43302228C15400CF2296;
+			remoteInfo = LolayInvestigo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4E2B43312228C15400CF2296 /* LolayInvestigo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LolayInvestigo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E2B43342228C15400CF2296 /* LolayInvestigo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LolayInvestigo.h; sourceTree = "<group>"; };
+		4E2B43352228C15400CF2296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E2B433A2228C15400CF2296 /* LolayInvestigoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LolayInvestigoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E2B43412228C15400CF2296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E2B437D2228C57B00CF2296 /* LolayTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolayTracker.swift; sourceTree = "<group>"; };
+		4E2B43932228CD6600CF2296 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppMeasurement.framework; sourceTree = "<group>"; };
+		4E2B43942228CD6600CF2296 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		4E2B43952228CD6600CF2296 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = "<group>"; };
+		4E2B43962228CD6600CF2296 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
+		4E2B43972228CD6600CF2296 /* FIRAnalyticsConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FIRAnalyticsConnector.framework; sourceTree = "<group>"; };
+		4E2B43982228CD6600CF2296 /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = nanopb.framework; sourceTree = "<group>"; };
+		4E2B43992228CD6600CF2296 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		4E2B439A2228CD6600CF2296 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
+		4E2B43A42228CD9E00CF2296 /* FirebaseCrash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCrash.framework; sourceTree = "<group>"; };
+		4E2B43A52228CD9E00CF2296 /* Protobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Protobuf.framework; sourceTree = "<group>"; };
+		4E2B43A62228CD9E00CF2296 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = "<group>"; };
+		4E2B43AA2228CF1C00CF2296 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		4E2B43AB2228CFA000CF2296 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		4E2B43AD2228CFAB00CF2296 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		4E2B43AF2228CFB600CF2296 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4E2B43B12228CFC400CF2296 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		4E2B43B32228CFCF00CF2296 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4E2B43B52228CFD900CF2296 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4E2B43B72228D01F00CF2296 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		4E2B43B92228D02A00CF2296 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		4E2B43BF2228E44500CF2296 /* LolayNoTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolayNoTracker.swift; sourceTree = "<group>"; };
+		4E2B43C12228E47500CF2296 /* LolayBaseTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolayBaseTracker.swift; sourceTree = "<group>"; };
+		4E2B43C32228EAFE00CF2296 /* LolayOSLogTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolayOSLogTracker.swift; sourceTree = "<group>"; };
+		4E2B43C52228F04400CF2296 /* LolayOSLogTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolayOSLogTrackerTests.swift; sourceTree = "<group>"; };
+		4E2B43C92228F83C00CF2296 /* LolayMultipleTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolayMultipleTracker.swift; sourceTree = "<group>"; };
+		4E6AAE142229077500EA9CFF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		4E6AAE162229078A00EA9CFF /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		4E6AAE1822290CFD00EA9CFF /* LolayMultipleTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolayMultipleTrackerTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4E2B432E2228C15400CF2296 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E2B43BA2228D02A00CF2296 /* CoreTelephony.framework in Frameworks */,
+				4E2B43B82228D01F00CF2296 /* libc++.tbd in Frameworks */,
+				4E2B43B62228CFDA00CF2296 /* UIKit.framework in Frameworks */,
+				4E2B43B42228CFCF00CF2296 /* SystemConfiguration.framework in Frameworks */,
+				4E2B43B22228CFC400CF2296 /* StoreKit.framework in Frameworks */,
+				4E2B43B02228CFB600CF2296 /* Security.framework in Frameworks */,
+				4E2B43AE2228CFAC00CF2296 /* libz.tbd in Frameworks */,
+				4E2B43AC2228CFA000CF2296 /* libsqlite3.tbd in Frameworks */,
+				4E2B439B2228CD6600CF2296 /* GoogleAppMeasurement.framework in Frameworks */,
+				4E2B439C2228CD6600CF2296 /* FirebaseInstanceID.framework in Frameworks */,
+				4E2B439E2228CD6600CF2296 /* GoogleUtilities.framework in Frameworks */,
+				4E2B439F2228CD6600CF2296 /* FIRAnalyticsConnector.framework in Frameworks */,
+				4E2B43A12228CD6600CF2296 /* FirebaseAnalytics.framework in Frameworks */,
+				4E2B43A92228CD9E00CF2296 /* GoogleToolboxForMac.framework in Frameworks */,
+				4E2B43A22228CD6600CF2296 /* FirebaseCoreDiagnostics.framework in Frameworks */,
+				4E2B43A02228CD6600CF2296 /* nanopb.framework in Frameworks */,
+				4E2B43A82228CD9E00CF2296 /* Protobuf.framework in Frameworks */,
+				4E2B439D2228CD6600CF2296 /* FirebaseCore.framework in Frameworks */,
+				4E2B43A72228CD9E00CF2296 /* FirebaseCrash.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E2B43372228C15400CF2296 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E2B433B2228C15400CF2296 /* LolayInvestigo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4E2B43272228C15400CF2296 = {
+			isa = PBXGroup;
+			children = (
+				4E6AAE162229078A00EA9CFF /* README */,
+				4E6AAE142229077500EA9CFF /* LICENSE */,
+				4E2B43332228C15400CF2296 /* LolayInvestigo */,
+				4E2B433E2228C15400CF2296 /* LolayInvestigoTests */,
+				4E2B437C2228C49300CF2296 /* Frameworks */,
+				4E2B43322228C15400CF2296 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4E2B43322228C15400CF2296 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4E2B43312228C15400CF2296 /* LolayInvestigo.framework */,
+				4E2B433A2228C15400CF2296 /* LolayInvestigoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4E2B43332228C15400CF2296 /* LolayInvestigo */ = {
+			isa = PBXGroup;
+			children = (
+				4E2B43342228C15400CF2296 /* LolayInvestigo.h */,
+				4E2B43352228C15400CF2296 /* Info.plist */,
+				4E2B437D2228C57B00CF2296 /* LolayTracker.swift */,
+				4E2B43BF2228E44500CF2296 /* LolayNoTracker.swift */,
+				4E2B43C12228E47500CF2296 /* LolayBaseTracker.swift */,
+				4E2B43C32228EAFE00CF2296 /* LolayOSLogTracker.swift */,
+				4E2B43C92228F83C00CF2296 /* LolayMultipleTracker.swift */,
+			);
+			path = LolayInvestigo;
+			sourceTree = "<group>";
+		};
+		4E2B433E2228C15400CF2296 /* LolayInvestigoTests */ = {
+			isa = PBXGroup;
+			children = (
+				4E2B43412228C15400CF2296 /* Info.plist */,
+				4E2B43C52228F04400CF2296 /* LolayOSLogTrackerTests.swift */,
+				4E6AAE1822290CFD00EA9CFF /* LolayMultipleTrackerTests.swift */,
+			);
+			path = LolayInvestigoTests;
+			sourceTree = "<group>";
+		};
+		4E2B437C2228C49300CF2296 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E2B43912228CD1B00CF2296 /* Firebase */,
+				4E2B43B92228D02A00CF2296 /* CoreTelephony.framework */,
+				4E2B43B72228D01F00CF2296 /* libc++.tbd */,
+				4E2B43B52228CFD900CF2296 /* UIKit.framework */,
+				4E2B43B32228CFCF00CF2296 /* SystemConfiguration.framework */,
+				4E2B43B12228CFC400CF2296 /* StoreKit.framework */,
+				4E2B43AF2228CFB600CF2296 /* Security.framework */,
+				4E2B43AD2228CFAB00CF2296 /* libz.tbd */,
+				4E2B43AB2228CFA000CF2296 /* libsqlite3.tbd */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		4E2B43912228CD1B00CF2296 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				4E2B43AA2228CF1C00CF2296 /* module.modulemap */,
+				4E2B43922228CD4400CF2296 /* Analytics */,
+				4E2B43A32228CD6D00CF2296 /* Crash */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		4E2B43922228CD4400CF2296 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				4E2B43972228CD6600CF2296 /* FIRAnalyticsConnector.framework */,
+				4E2B43992228CD6600CF2296 /* FirebaseAnalytics.framework */,
+				4E2B43952228CD6600CF2296 /* FirebaseCore.framework */,
+				4E2B439A2228CD6600CF2296 /* FirebaseCoreDiagnostics.framework */,
+				4E2B43942228CD6600CF2296 /* FirebaseInstanceID.framework */,
+				4E2B43932228CD6600CF2296 /* GoogleAppMeasurement.framework */,
+				4E2B43962228CD6600CF2296 /* GoogleUtilities.framework */,
+				4E2B43982228CD6600CF2296 /* nanopb.framework */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		4E2B43A32228CD6D00CF2296 /* Crash */ = {
+			isa = PBXGroup;
+			children = (
+				4E2B43A42228CD9E00CF2296 /* FirebaseCrash.framework */,
+				4E2B43A62228CD9E00CF2296 /* GoogleToolboxForMac.framework */,
+				4E2B43A52228CD9E00CF2296 /* Protobuf.framework */,
+			);
+			path = Crash;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4E2B432C2228C15400CF2296 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E2B43422228C15400CF2296 /* LolayInvestigo.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4E2B43302228C15400CF2296 /* LolayInvestigo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E2B43452228C15400CF2296 /* Build configuration list for PBXNativeTarget "LolayInvestigo" */;
+			buildPhases = (
+				4E2B432C2228C15400CF2296 /* Headers */,
+				4E2B432D2228C15400CF2296 /* Sources */,
+				4E2B432E2228C15400CF2296 /* Frameworks */,
+				4E2B432F2228C15400CF2296 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LolayInvestigo;
+			productName = LolayInvestigo;
+			productReference = 4E2B43312228C15400CF2296 /* LolayInvestigo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4E2B43392228C15400CF2296 /* LolayInvestigoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E2B43482228C15400CF2296 /* Build configuration list for PBXNativeTarget "LolayInvestigoTests" */;
+			buildPhases = (
+				4E2B43362228C15400CF2296 /* Sources */,
+				4E2B43372228C15400CF2296 /* Frameworks */,
+				4E2B43382228C15400CF2296 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4E2B433D2228C15400CF2296 /* PBXTargetDependency */,
+			);
+			name = LolayInvestigoTests;
+			productName = LolayInvestigoTests;
+			productReference = 4E2B433A2228C15400CF2296 /* LolayInvestigoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4E2B43282228C15400CF2296 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Lolay, Inc.";
+				TargetAttributes = {
+					4E2B43302228C15400CF2296 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
+					4E2B43392228C15400CF2296 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 4E2B432B2228C15400CF2296 /* Build configuration list for PBXProject "LolayInvestigo" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4E2B43272228C15400CF2296;
+			productRefGroup = 4E2B43322228C15400CF2296 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4E2B43302228C15400CF2296 /* LolayInvestigo */,
+				4E2B43392228C15400CF2296 /* LolayInvestigoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4E2B432F2228C15400CF2296 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E6AAE172229078A00EA9CFF /* README in Resources */,
+				4E6AAE152229077500EA9CFF /* LICENSE in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E2B43382228C15400CF2296 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4E2B432D2228C15400CF2296 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E2B43C22228E47500CF2296 /* LolayBaseTracker.swift in Sources */,
+				4E2B437E2228C57B00CF2296 /* LolayTracker.swift in Sources */,
+				4E2B43C02228E44500CF2296 /* LolayNoTracker.swift in Sources */,
+				4E2B43CA2228F83C00CF2296 /* LolayMultipleTracker.swift in Sources */,
+				4E2B43C42228EAFE00CF2296 /* LolayOSLogTracker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E2B43362228C15400CF2296 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E6AAE1922290CFD00EA9CFF /* LolayMultipleTrackerTests.swift in Sources */,
+				4E2B43C62228F04400CF2296 /* LolayOSLogTrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4E2B433D2228C15400CF2296 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E2B43302228C15400CF2296 /* LolayInvestigo */;
+			targetProxy = 4E2B433C2228C15400CF2296 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4E2B43432228C15400CF2296 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4E2B43442228C15400CF2296 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4E2B43462228C15400CF2296 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "Frameworks/**";
+				INFOPLIST_FILE = LolayInvestigo/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = org.lolay.LolayInvestigo;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4E2B43472228C15400CF2296 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "Frameworks/**";
+				INFOPLIST_FILE = LolayInvestigo/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = org.lolay.LolayInvestigo;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4E2B43492228C15400CF2296 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LolayInvestigoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.lolay.LolayInvestigoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4E2B434A2228C15400CF2296 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LolayInvestigoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.lolay.LolayInvestigoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4E2B432B2228C15400CF2296 /* Build configuration list for PBXProject "LolayInvestigo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E2B43432228C15400CF2296 /* Debug */,
+				4E2B43442228C15400CF2296 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E2B43452228C15400CF2296 /* Build configuration list for PBXNativeTarget "LolayInvestigo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E2B43462228C15400CF2296 /* Debug */,
+				4E2B43472228C15400CF2296 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E2B43482228C15400CF2296 /* Build configuration list for PBXNativeTarget "LolayInvestigoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E2B43492228C15400CF2296 /* Debug */,
+				4E2B434A2228C15400CF2296 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4E2B43282228C15400CF2296 /* Project object */;
+}
