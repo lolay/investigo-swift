@@ -1,0 +1,5 @@
+language: swift
+xcode_project: LolayInvestigo.xcodeproj
+xcode_scheme: LolayInvestigo
+xcode_destination: platform=iOS Simulator,OS=12.1,name=iPhone X
+xcode_sdk=iphonesimulator12.1
