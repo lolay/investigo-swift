@@ -31,8 +31,6 @@
 		4E2B43C42228EAFE00CF2296 /* LolayOSLogTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B43C32228EAFE00CF2296 /* LolayOSLogTracker.swift */; };
 		4E2B43C62228F04400CF2296 /* LolayOSLogTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B43C52228F04400CF2296 /* LolayOSLogTrackerTests.swift */; };
 		4E2B43CA2228F83C00CF2296 /* LolayMultipleTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B43C92228F83C00CF2296 /* LolayMultipleTracker.swift */; };
-		4E6AAE152229077500EA9CFF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 4E6AAE142229077500EA9CFF /* LICENSE */; };
-		4E6AAE172229078A00EA9CFF /* README in Resources */ = {isa = PBXBuildFile; fileRef = 4E6AAE162229078A00EA9CFF /* README */; };
 		4E6AAE1922290CFD00EA9CFF /* LolayMultipleTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AAE1822290CFD00EA9CFF /* LolayMultipleTrackerTests.swift */; };
 		4E6AAE1B2229103900EA9CFF /* LolayFirebaseTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AAE1A2229103900EA9CFF /* LolayFirebaseTracker.swift */; };
 		4E6AAE1D2229199E00EA9CFF /* LolayCrashlyticsTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AAE1C2229199E00EA9CFF /* LolayCrashlyticsTracker.swift */; };
@@ -81,8 +79,8 @@
 		4E2B43C32228EAFE00CF2296 /* LolayOSLogTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolayOSLogTracker.swift; sourceTree = "<group>"; };
 		4E2B43C52228F04400CF2296 /* LolayOSLogTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolayOSLogTrackerTests.swift; sourceTree = "<group>"; };
 		4E2B43C92228F83C00CF2296 /* LolayMultipleTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolayMultipleTracker.swift; sourceTree = "<group>"; };
+		4E58D8B2222D075000666395 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4E6AAE142229077500EA9CFF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		4E6AAE162229078A00EA9CFF /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		4E6AAE1822290CFD00EA9CFF /* LolayMultipleTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolayMultipleTrackerTests.swift; sourceTree = "<group>"; };
 		4E6AAE1A2229103900EA9CFF /* LolayFirebaseTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolayFirebaseTracker.swift; sourceTree = "<group>"; };
 		4E6AAE1C2229199E00EA9CFF /* LolayCrashlyticsTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolayCrashlyticsTracker.swift; sourceTree = "<group>"; };
@@ -132,8 +130,8 @@
 		4E2B43272228C15400CF2296 = {
 			isa = PBXGroup;
 			children = (
-				4E6AAE162229078A00EA9CFF /* README */,
 				4E6AAE142229077500EA9CFF /* LICENSE */,
+				4E58D8B2222D075000666395 /* README.md */,
 				4E2B43332228C15400CF2296 /* LolayInvestigo */,
 				4E2B433E2228C15400CF2296 /* LolayInvestigoTests */,
 				4E2B437C2228C49300CF2296 /* Frameworks */,
@@ -320,8 +318,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E6AAE172229078A00EA9CFF /* README in Resources */,
-				4E6AAE152229077500EA9CFF /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
