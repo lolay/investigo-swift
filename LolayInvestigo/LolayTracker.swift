@@ -14,7 +14,7 @@
 //  limitations under the License.
 //
 
-protocol LolayTracker {
+public protocol LolayTracker {
     func setIdentifier(_ identifier: String)
     func setVersion(_ version: String)
     func setEmail(_ email: String)

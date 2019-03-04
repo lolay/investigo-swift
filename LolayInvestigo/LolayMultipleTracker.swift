@@ -16,91 +16,91 @@
 
 import Foundation
 
-class LolayMultipleTracker: LolayBaseTracker {
-    var trackers: [LolayTracker]
+public class LolayMultipleTracker: LolayBaseTracker {
+    public var trackers: [LolayTracker]
     
-    init(_ trackers: LolayTracker...) {
+    public init(_ trackers: LolayTracker...) {
         self.trackers = trackers
     }
     
-    
-    override func setIdentifier(_ identifier: String) {
+    override public func setIdentifier(_ identifier: String) {
         for tracker in trackers {
             tracker.setIdentifier(identifier)
         }
     }
     
-    override func setVersion(_ version: String) {
+    override public func setVersion(_ version: String) {
         for tracker in trackers {
             tracker.setVersion(version)
         }
     }
     
-    override func setEmail(_ email: String) {
+    override public func setEmail(_ email: String) {
         for tracker in trackers {
             tracker.setEmail(email)
         }
     }
     
-    override func setName(_ name: String) {
+    override public func setName(_ name: String) {
         for tracker in trackers {
             tracker.setName(name)
         }
     }
     
-    override func setGlobalParameters(_ globalParameters: [String:String]) {
+    override public func setGlobalParameters(_ globalParameters: [String:String]) {
         for tracker in trackers {
             tracker.setGlobalParameters(globalParameters)
         }
     }
     
-    override func setGlobalParameter(_ value: String, forKey key:String) {
+    override public func setGlobalParameter(_ value: String, forKey key:String) {
         for tracker in trackers {
             tracker.setGlobalParameter(value, forKey: key)
         }
     }
     
-    override func removeGlobalParameterForKey(_ key:String) {
+    override public func removeGlobalParameterForKey(_ key:String) {
         for tracker in trackers {
             tracker.removeGlobalParameterForKey(key)
         }
     }
     
-    override func logEvent(_ name: String) {
+    override public func logEvent(_ name: String) {
         for tracker in trackers {
             tracker.logEvent(name)
         }
     }
     
-    override func logEvent(_ name: String, withDictionary dictionary: [String:String]) {
+    override public func logEvent(_ name: String, withDictionary dictionary: [String:String]) {
         for tracker in trackers {
             tracker.logEvent(name, withDictionary: dictionary)
         }
     }
     
-    override func logPage(_ name: String) {
+    override public func logPage(_ name: String) {
         for tracker in trackers {
             tracker.logPage(name)
         }
     }
-    override func logPage(_ name: String, withDictionary dictionary: [String:String]) {
+    
+    override public func logPage(_ name: String, withDictionary dictionary: [String:String]) {
         for tracker in trackers {
             tracker.logEvent(name, withDictionary: dictionary)
         }
     }
     
-    override func logError(_ error: Error) {
+    override public func logError(_ error: Error) {
         for tracker in trackers {
             tracker.logError(error)
         }
     }
     
-    override func logError(_ error: NSError) {
+    override public func logError(_ error: NSError) {
         for tracker in trackers {
             tracker.logError(error)
         }
     }
-    override func logException(_ exception: NSException) {
+    override public func logException(_ exception: NSException) {
         for tracker in trackers {
             tracker.logException(exception)
         }

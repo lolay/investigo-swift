@@ -16,55 +16,55 @@
 
 import Crashlytics
 
-class LolayCrashlyticsTracker: LolayBaseTracker {
-    override func setIdentifier(_ identifier: String) {
+public class LolayCrashlyticsTracker: LolayBaseTracker {
+    override public func setIdentifier(_ identifier: String) {
         Crashlytics.sharedInstance().setUserIdentifier(identifier)
     }
     
-    override func setEmail(_ email: String) {
+    override public func setEmail(_ email: String) {
         Crashlytics.sharedInstance().setUserEmail(email)
     }
     
-    override func setName(_ name: String) {
+    override public func setName(_ name: String) {
         Crashlytics.sharedInstance().setUserName(name)
     }
     
-    override func setGlobalParameters(_ globalParameters: [String:String]) {
+    override public func setGlobalParameters(_ globalParameters: [String:String]) {
         let crashlytics = Crashlytics.sharedInstance()
         for (key, value) in globalParameters {
             crashlytics.setObjectValue(value, forKey: key)
         }
     }
     
-    override func setGlobalParameter(_ value: String, forKey key:String) {
+    override public func setGlobalParameter(_ value: String, forKey key:String) {
         Crashlytics.sharedInstance().setObjectValue(value, forKey: key)
     }
     
-    override func removeGlobalParameterForKey(_ key:String) {
+    override public func removeGlobalParameterForKey(_ key:String) {
         Crashlytics.sharedInstance().setObjectValue(nil, forKey: key)
     }
     
-    override func logEvent(_ name: String) {
+    override public func logEvent(_ name: String) {
         Answers.logCustomEvent(withName: name, customAttributes: nil)
     }
     
-    override func logEvent(_ name: String, withDictionary dictionary: [String:String]) {
+    override public func logEvent(_ name: String, withDictionary dictionary: [String:String]) {
         Answers.logCustomEvent(withName: name, customAttributes: dictionary)
     }
     
-    override func logPage(_ name: String) {
+    override public func logPage(_ name: String) {
         Answers.logCustomEvent(withName: name + "-page", customAttributes: nil)
     }
     
-    override func logPage(_ name: String, withDictionary dictionary: [String:String]) {
+    override public func logPage(_ name: String, withDictionary dictionary: [String:String]) {
         Answers.logCustomEvent(withName: name + "-page", customAttributes: dictionary)
     }
     
-    override func logError(_ error: Error) {
+    override public func logError(_ error: Error) {
         Crashlytics.sharedInstance().recordError(error)
     }
     
-    override func logError(_ error: NSError) {
+    override public func logError(_ error: NSError) {
         Crashlytics.sharedInstance().recordError(error)
     }
 }

@@ -14,19 +14,19 @@
 //  limitations under the License.
 //
 
-class LolayBaseTracker: LolayTracker {
-    func setIdentifier(_ identifier: String) { }
-    func setVersion(_ version: String) { }
-    func setEmail(_ email: String) { }
-    func setName(_ name: String) { }
-    func setGlobalParameters(_ globalParameters: [String:String]) { }
-    func setGlobalParameter(_ value: String, forKey key:String) { }
-    func removeGlobalParameterForKey(_ key:String) { }
-    func logEvent(_ name: String) { }
-    func logEvent(_ name: String, withDictionary dictionary: [String:String]) { }
-    func logPage(_ name: String) { }
-    func logPage(_ name: String, withDictionary dictionary: [String:String]) { }
-    func logError(_ error: Error) { }
-    func logError(_ error: NSError) { }
-    func logException(_ exception: NSException) { }
+public class LolayBaseTracker: LolayTracker {
+    public func setIdentifier(_ identifier: String) { }
+    public func setVersion(_ version: String) { }
+    public func setEmail(_ email: String) { }
+    public func setName(_ name: String) { }
+    public func setGlobalParameters(_ globalParameters: [String:String]) { }
+    public func setGlobalParameter(_ value: String, forKey key:String) { }
+    public func removeGlobalParameterForKey(_ key:String) { }
+    public func logEvent(_ name: String) { }
+    public func logEvent(_ name: String, withDictionary dictionary: [String:String]) { }
+    public func logPage(_ name: String) { }
+    public func logPage(_ name: String, withDictionary dictionary: [String:String]) { }
+    public func logError(_ error: Error) { }
+    public func logError(_ error: NSError) { }
+    public func logException(_ exception: NSException) { }
 }

@@ -16,39 +16,39 @@
 
 import os.log
 
-class LolayOSLogTracker: LolayBaseTracker {
-    var log: OSLog
+public class LolayOSLogTracker: LolayBaseTracker {
+    public var log: OSLog
     
-    init(bundleIdentifier: String) {
+    public init(bundleIdentifier: String) {
         let className = String(describing: type(of: self))
         log = OSLog.init(subsystem: bundleIdentifier, category: className)
     }
     
-    override func logEvent(_ name: String) {
+    override public func logEvent(_ name: String) {
         os_log(.info, log: log, "event=%{PUBLIC}@", name)
     }
     
-    override func logEvent(_ name: String, withDictionary dictionary: [String:String]) {
+    override public func logEvent(_ name: String, withDictionary dictionary: [String:String]) {
         os_log(.info, log: log, "event=%{PUBLIC}@, dictionary=%{PUBLIC}@", name, dictionary.description)
     }
     
-    override func logPage(_ name: String) {
+    override public func logPage(_ name: String) {
         os_log(.info, log: log, "page=%{PUBLIC}@", name)
     }
     
-    override func logPage(_ name: String, withDictionary dictionary: [String:String]) {
+    override public func logPage(_ name: String, withDictionary dictionary: [String:String]) {
         os_log(.info, log: log, "page=%{PUBLIC}@, dictionary=%{PUBLIC}@", name, dictionary.description)
     }
     
-    override func logError(_ error: Error) {
+    override public func logError(_ error: Error) {
         os_log(.error, log: log, "error=%{PUBLIC}@", error.localizedDescription)
     }
     
-    override func logError(_ error: NSError) {
+    override public func logError(_ error: NSError) {
         os_log(.error, log: log, "error=%{PUBLIC}@", error.localizedDescription)
     }
     
-    override func logException(_ exception: NSException) {
+    override public func logException(_ exception: NSException) {
         os_log(.fault, log: log, "exception=%{PUBLIC}@", exception.debugDescription)
     }
 }

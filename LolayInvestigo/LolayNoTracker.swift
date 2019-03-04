@@ -16,4 +16,4 @@
 
 import Foundation
 
-class LolayNoTracker: LolayBaseTracker { }
+public class LolayNoTracker: LolayBaseTracker { }

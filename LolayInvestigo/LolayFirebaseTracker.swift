@@ -16,39 +16,39 @@
 
 import FirebaseAnalytics
 
-class LolayFirebaseTracker: LolayBaseTracker {
-    override func setIdentifier(_ identifier: String) {
+public class LolayFirebaseTracker: LolayBaseTracker {
+    override public func setIdentifier(_ identifier: String) {
         Analytics.setUserID(identifier)
     }
     
-    override func setGlobalParameters(_ globalParameters: [String:String]) {
+    override public func setGlobalParameters(_ globalParameters: [String:String]) {
         for (key, value) in globalParameters {
             Analytics.setUserProperty(value, forName: key)
         }
     }
     
-    override func setGlobalParameter(_ value: String, forKey key:String) {
+    override public func setGlobalParameter(_ value: String, forKey key:String) {
         Analytics.setUserProperty(value, forName: key)
     }
     
-    override func removeGlobalParameterForKey(_ key:String) {
+    override public func removeGlobalParameterForKey(_ key:String) {
         Analytics.setUserProperty(nil, forName: key)
     }
     
-    override func logEvent(_ name: String) {
+    override public func logEvent(_ name: String) {
         Analytics.logEvent(name, parameters: nil)
     }
     
-    override func logEvent(_ name: String, withDictionary dictionary: [String:String]) {
+    override public func logEvent(_ name: String, withDictionary dictionary: [String:String]) {
         Analytics.logEvent(name, parameters: dictionary)
     }
     
-    override func logPage(_ name: String) {
+    override public func logPage(_ name: String) {
         Analytics.setScreenName(name, screenClass: name)
         Analytics.logEvent(name + "-page", parameters: nil)
     }
     
-    override func logPage(_ name: String, withDictionary dictionary: [String:String]) {
+    override public func logPage(_ name: String, withDictionary dictionary: [String:String]) {
         Analytics.setScreenName(name, screenClass: name)
         Analytics.logEvent(name + "-page", parameters: dictionary)
     }
