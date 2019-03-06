@@ -11,7 +11,4 @@ Pod::Spec.new do |s|
   s.module_name = "LolayInvestigo"
   s.ios.deployment_target = '12.1'
   s.source_files = 'LolayInvestigo/*.swift'
-  s.dependency 'Fabric', '1.9.0'
-  s.dependency 'Crashlytics', '3.12.0'
-  s.dependency 'Firebase/Analytics', '5.18.0'
 end
