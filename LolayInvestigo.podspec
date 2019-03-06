@@ -8,6 +8,7 @@ Pod::Spec.new do |s|
   s.source = { :git => 'https://github.com/lolay/investigo-swift.git', :tag => s.version }
   s.swift_version = "4.2"
   s.module_name = "LolayInvestigo"
+  s.static_framework = true
   s.ios.deployment_target = '12.1'
   s.source_files = 'LolayInvestigo/*.swift'
   s.dependency 'Fabric', '1.9.0'
