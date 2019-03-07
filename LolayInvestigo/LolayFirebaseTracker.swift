@@ -17,6 +17,10 @@
 import FirebaseAnalytics
 
 public class LolayFirebaseTracker: LolayBaseTracker {
+    override public init() {
+        super.init()
+    }
+    
     override public func setIdentifier(_ identifier: String) {
         Analytics.setUserID(identifier)
     }

@@ -16,4 +16,8 @@
 
 import Foundation
 
-public class LolayNoTracker: LolayBaseTracker { }
+public class LolayNoTracker: LolayBaseTracker {
+    override public init() {
+        super.init()
+    }
+}

@@ -37,6 +37,7 @@
 /* Begin PBXFileReference section */
 		3215B71B84F39629DBC34B73 /* Pods-LolayInvestigo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LolayInvestigo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LolayInvestigo/Pods-LolayInvestigo.release.xcconfig"; sourceTree = "<group>"; };
 		475AD88A56980F9730F6C090 /* libPods-LolayInvestigoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LolayInvestigoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E0B825D22310AC20054EF27 /* LolayInvestigo.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = LolayInvestigo.podspec; sourceTree = "<group>"; };
 		4E2B43312228C15400CF2296 /* LolayInvestigo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LolayInvestigo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E2B43342228C15400CF2296 /* LolayInvestigo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LolayInvestigo.h; sourceTree = "<group>"; };
 		4E2B43352228C15400CF2296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,6 +88,7 @@
 			children = (
 				4E6AAE142229077500EA9CFF /* LICENSE */,
 				4E58D8B2222D075000666395 /* README.md */,
+				4E0B825D22310AC20054EF27 /* LolayInvestigo.podspec */,
 				4E2B43332228C15400CF2296 /* LolayInvestigo */,
 				4E2B433E2228C15400CF2296 /* LolayInvestigoTests */,
 				4E2B43322228C15400CF2296 /* Products */,

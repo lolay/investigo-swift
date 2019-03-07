@@ -17,6 +17,10 @@
 import Crashlytics
 
 public class LolayCrashlyticsTracker: LolayBaseTracker {
+    override public init() {
+        super.init()
+    }
+    
     override public func setIdentifier(_ identifier: String) {
         Crashlytics.sharedInstance().setUserIdentifier(identifier)
     }
