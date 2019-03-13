@@ -49,11 +49,11 @@ public class LolayFirebaseTracker: LolayBaseTracker {
     
     override public func logPage(_ name: String) {
         Analytics.setScreenName(name, screenClass: name)
-        Analytics.logEvent(name + "Page", parameters: nil)
+        Analytics.logEvent(name + "_page", parameters: nil)
     }
     
     override public func logPage(_ name: String, withDictionary dictionary: [String:String]) {
         Analytics.setScreenName(name, screenClass: name)
-        Analytics.logEvent(name + "Page", parameters: dictionary)
+        Analytics.logEvent(name + "_page", parameters: dictionary)
     }
 }
