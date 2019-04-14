@@ -1,11 +1,11 @@
 os: osx
-osx_image: xcode10.1
+osx_image: xcode10.2
 branches:
   only:
     - master
 language: swift
 xcode_workspace: LolayInvestigo.xcworkspace
 xcode_scheme: LolayInvestigo
-xcode_destination: platform=iOS Simulator,OS=12.1,name=iPhone X
-xcode_sdk: iphonesimulator12.1
+xcode_destination: platform=iOS Simulator,OS=12.1,name=iPhone Xs
+xcode_sdk: iphonesimulator12.2
 
