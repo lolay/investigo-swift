@@ -4,5 +4,4 @@ multiple trackign libraries and even logging to just OSLog.
 
 The following libraries can be added:
 * Firebase Analytics
-* Crashlytics
-* Fabric
+* Firebase Crashlytics
