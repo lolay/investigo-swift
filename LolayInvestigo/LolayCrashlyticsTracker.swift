@@ -14,7 +14,7 @@
 //  limitations under the License.
 //
 
-import Firebase
+import FirebaseCrashlytics
 
 public class LolayCrashlyticsTracker: LolayBaseTracker {
     override public init() {
