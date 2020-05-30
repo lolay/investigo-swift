@@ -20,8 +20,8 @@
 		4E6AAE1D2229199E00EA9CFF /* LolayCrashlyticsTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AAE1C2229199E00EA9CFF /* LolayCrashlyticsTracker.swift */; };
 		4E6AAE2922291F9A00EA9CFF /* LolayFirebaseTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AAE2822291F9A00EA9CFF /* LolayFirebaseTrackerTests.swift */; };
 		4E6AAE2B2229201B00EA9CFF /* LolayCrashlyticsTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AAE2A2229201B00EA9CFF /* LolayCrashlyticsTracker.swift */; };
-		9006E03FE18941E7D5ECCB60 /* Pods_LolayInvestigo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7994818681AFBBD4637CDF55 /* Pods_LolayInvestigo.framework */; };
-		9CF0CB06E844C0FC61E506EC /* Pods_LolayInvestigoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E13613181F6D0C53ABE2CC1 /* Pods_LolayInvestigoTests.framework */; };
+		9FE4046BE8B1D45222221E04 /* Pods_LolayInvestigo_LolayInvestigoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2312371DC5DF9025A644EF2A /* Pods_LolayInvestigo_LolayInvestigoTests.framework */; };
+		D9FD3C8AB047C9F92F78A899 /* Pods_LolayInvestigo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27EB14F3D994E03FEEBB31D1 /* Pods_LolayInvestigo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3215B71B84F39629DBC34B73 /* Pods-LolayInvestigo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LolayInvestigo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LolayInvestigo/Pods-LolayInvestigo.release.xcconfig"; sourceTree = "<group>"; };
+		2312371DC5DF9025A644EF2A /* Pods_LolayInvestigo_LolayInvestigoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LolayInvestigo_LolayInvestigoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27EB14F3D994E03FEEBB31D1 /* Pods_LolayInvestigo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LolayInvestigo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E0B825D22310AC20054EF27 /* LolayInvestigo.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = LolayInvestigo.podspec; sourceTree = "<group>"; };
-		4E13613181F6D0C53ABE2CC1 /* Pods_LolayInvestigoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LolayInvestigoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E2B43312228C15400CF2296 /* LolayInvestigo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LolayInvestigo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E2B43342228C15400CF2296 /* LolayInvestigo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LolayInvestigo.h; sourceTree = "<group>"; };
 		4E2B43352228C15400CF2296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,7 +50,6 @@
 		4E2B43C52228F04400CF2296 /* LolayOSLogTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolayOSLogTrackerTests.swift; sourceTree = "<group>"; };
 		4E2B43C92228F83C00CF2296 /* LolayMultipleTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolayMultipleTracker.swift; sourceTree = "<group>"; };
 		4E53F2E82481BE0F00EA5E77 /* libFirebaseCrashlytics.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCrashlytics.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E53F2EA2481BE6900EA5E77 /* libPods-LolayInvestigo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-LolayInvestigo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E58D8B2222D075000666395 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4E6AAE142229077500EA9CFF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		4E6AAE1822290CFD00EA9CFF /* LolayMultipleTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolayMultipleTrackerTests.swift; sourceTree = "<group>"; };
@@ -58,10 +57,10 @@
 		4E6AAE1C2229199E00EA9CFF /* LolayCrashlyticsTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolayCrashlyticsTracker.swift; sourceTree = "<group>"; };
 		4E6AAE2822291F9A00EA9CFF /* LolayFirebaseTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolayFirebaseTrackerTests.swift; sourceTree = "<group>"; };
 		4E6AAE2A2229201B00EA9CFF /* LolayCrashlyticsTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolayCrashlyticsTracker.swift; sourceTree = "<group>"; };
-		7994818681AFBBD4637CDF55 /* Pods_LolayInvestigo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LolayInvestigo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D3F217519E8E50FC1E20AE8 /* Pods-LolayInvestigoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LolayInvestigoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LolayInvestigoTests/Pods-LolayInvestigoTests.debug.xcconfig"; sourceTree = "<group>"; };
-		AE3C30D5B762CB01C6AE20F9 /* Pods-LolayInvestigo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LolayInvestigo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LolayInvestigo/Pods-LolayInvestigo.debug.xcconfig"; sourceTree = "<group>"; };
-		D67C5B8629EFE31B777071E8 /* Pods-LolayInvestigoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LolayInvestigoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LolayInvestigoTests/Pods-LolayInvestigoTests.release.xcconfig"; sourceTree = "<group>"; };
+		89A7AA717DB3B9E50303F1CC /* Pods-LolayInvestigo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LolayInvestigo.debug.xcconfig"; path = "Target Support Files/Pods-LolayInvestigo/Pods-LolayInvestigo.debug.xcconfig"; sourceTree = "<group>"; };
+		B4A5C38DAD46360DFB38D7F5 /* Pods-LolayInvestigo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LolayInvestigo.release.xcconfig"; path = "Target Support Files/Pods-LolayInvestigo/Pods-LolayInvestigo.release.xcconfig"; sourceTree = "<group>"; };
+		D16DEF3FC8C13B14FEEBC002 /* Pods-LolayInvestigo-LolayInvestigoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LolayInvestigo-LolayInvestigoTests.release.xcconfig"; path = "Target Support Files/Pods-LolayInvestigo-LolayInvestigoTests/Pods-LolayInvestigo-LolayInvestigoTests.release.xcconfig"; sourceTree = "<group>"; };
+		E73FF0FB1ED01701E7A823A2 /* Pods-LolayInvestigo-LolayInvestigoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LolayInvestigo-LolayInvestigoTests.debug.xcconfig"; path = "Target Support Files/Pods-LolayInvestigo-LolayInvestigoTests/Pods-LolayInvestigo-LolayInvestigoTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9006E03FE18941E7D5ECCB60 /* Pods_LolayInvestigo.framework in Frameworks */,
+				D9FD3C8AB047C9F92F78A899 /* Pods_LolayInvestigo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,13 +77,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E2B433B2228C15400CF2296 /* LolayInvestigo.framework in Frameworks */,
-				9CF0CB06E844C0FC61E506EC /* Pods_LolayInvestigoTests.framework in Frameworks */,
+				9FE4046BE8B1D45222221E04 /* Pods_LolayInvestigo_LolayInvestigoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1CC7044F1F8E115069A7FBAB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				89A7AA717DB3B9E50303F1CC /* Pods-LolayInvestigo.debug.xcconfig */,
+				B4A5C38DAD46360DFB38D7F5 /* Pods-LolayInvestigo.release.xcconfig */,
+				E73FF0FB1ED01701E7A823A2 /* Pods-LolayInvestigo-LolayInvestigoTests.debug.xcconfig */,
+				D16DEF3FC8C13B14FEEBC002 /* Pods-LolayInvestigo-LolayInvestigoTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4E2B43272228C15400CF2296 = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +105,8 @@
 				4E2B43332228C15400CF2296 /* LolayInvestigo */,
 				4E2B433E2228C15400CF2296 /* LolayInvestigoTests */,
 				4E2B43322228C15400CF2296 /* Products */,
-				E1727ECF3304B2513B386A1D /* Pods */,
 				53244F7066104331B29A1D10 /* Frameworks */,
+				1CC7044F1F8E115069A7FBAB /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,23 +150,11 @@
 		53244F7066104331B29A1D10 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4E53F2EA2481BE6900EA5E77 /* libPods-LolayInvestigo.a */,
 				4E53F2E82481BE0F00EA5E77 /* libFirebaseCrashlytics.a */,
-				7994818681AFBBD4637CDF55 /* Pods_LolayInvestigo.framework */,
-				4E13613181F6D0C53ABE2CC1 /* Pods_LolayInvestigoTests.framework */,
+				27EB14F3D994E03FEEBB31D1 /* Pods_LolayInvestigo.framework */,
+				2312371DC5DF9025A644EF2A /* Pods_LolayInvestigo_LolayInvestigoTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E1727ECF3304B2513B386A1D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				AE3C30D5B762CB01C6AE20F9 /* Pods-LolayInvestigo.debug.xcconfig */,
-				3215B71B84F39629DBC34B73 /* Pods-LolayInvestigo.release.xcconfig */,
-				9D3F217519E8E50FC1E20AE8 /* Pods-LolayInvestigoTests.debug.xcconfig */,
-				D67C5B8629EFE31B777071E8 /* Pods-LolayInvestigoTests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,7 +175,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E2B43452228C15400CF2296 /* Build configuration list for PBXNativeTarget "LolayInvestigo" */;
 			buildPhases = (
-				4750EB2A2776FA998C3F5A2D /* [CP] Check Pods Manifest.lock */,
+				7AC45A488130A0317E9FC1D2 /* [CP] Check Pods Manifest.lock */,
 				4E2B432C2228C15400CF2296 /* Headers */,
 				4E2B432D2228C15400CF2296 /* Sources */,
 				4E2B432E2228C15400CF2296 /* Frameworks */,
@@ -195,10 +194,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E2B43482228C15400CF2296 /* Build configuration list for PBXNativeTarget "LolayInvestigoTests" */;
 			buildPhases = (
-				0E7E3127CC9904BF70EF9642 /* [CP] Check Pods Manifest.lock */,
+				D8D849EC171A5836411ACF0D /* [CP] Check Pods Manifest.lock */,
 				4E2B43362228C15400CF2296 /* Sources */,
 				4E2B43372228C15400CF2296 /* Frameworks */,
 				4E2B43382228C15400CF2296 /* Resources */,
+				8DE532120CE5BCCF545ED34D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -265,36 +265,61 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0E7E3127CC9904BF70EF9642 /* [CP] Check Pods Manifest.lock */ = {
+		7AC45A488130A0317E9FC1D2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LolayInvestigoTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-LolayInvestigo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4750EB2A2776FA998C3F5A2D /* [CP] Check Pods Manifest.lock */ = {
+		8DE532120CE5BCCF545ED34D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LolayInvestigo-LolayInvestigoTests/Pods-LolayInvestigo-LolayInvestigoTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LolayInvestigo-LolayInvestigoTests/Pods-LolayInvestigo-LolayInvestigoTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LolayInvestigo-LolayInvestigoTests/Pods-LolayInvestigo-LolayInvestigoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8D849EC171A5836411ACF0D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LolayInvestigo-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-LolayInvestigo-LolayInvestigoTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -466,7 +491,7 @@
 		};
 		4E2B43462228C15400CF2296 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE3C30D5B762CB01C6AE20F9 /* Pods-LolayInvestigo.debug.xcconfig */;
+			baseConfigurationReference = 89A7AA717DB3B9E50303F1CC /* Pods-LolayInvestigo.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -490,7 +515,7 @@
 		};
 		4E2B43472228C15400CF2296 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3215B71B84F39629DBC34B73 /* Pods-LolayInvestigo.release.xcconfig */;
+			baseConfigurationReference = B4A5C38DAD46360DFB38D7F5 /* Pods-LolayInvestigo.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -513,7 +538,7 @@
 		};
 		4E2B43492228C15400CF2296 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D3F217519E8E50FC1E20AE8 /* Pods-LolayInvestigoTests.debug.xcconfig */;
+			baseConfigurationReference = E73FF0FB1ED01701E7A823A2 /* Pods-LolayInvestigo-LolayInvestigoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,7 +557,7 @@
 		};
 		4E2B434A2228C15400CF2296 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D67C5B8629EFE31B777071E8 /* Pods-LolayInvestigoTests.release.xcconfig */;
+			baseConfigurationReference = D16DEF3FC8C13B14FEEBC002 /* Pods-LolayInvestigo-LolayInvestigoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
