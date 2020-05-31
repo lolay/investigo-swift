@@ -19,4 +19,4 @@ jobs:
         sudo xcode-select -switch /Applications/Xcode_11.5.app
         xcodebuild -version -sdk
     - name: Build
-      run: xcodebuild -workspace LolayInvestigo.xcworkspace -scheme LolayInvestigo -sdk iphoneos13.5 clean build test | xcpretty
+      run: xcodebuild -workspace LolayInvestigo.xcworkspace -scheme LolayInvestigo -sdk iphoneos13.5 -destination "platform=iOS Simulator,OS=13.5,name=iPhone SE (2nd generation)" clean build test | xcpretty
