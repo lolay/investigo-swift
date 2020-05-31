@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/lolay/investigo-swift.svg?branch=master)](https://travis-ci.com/lolay/investigo-swift)
+![CI](https://github.com/lolay/investigo-swift/workflows/CI/badge.svg)
 A tracking wrapper to assist with having different trackers per locale, logging to
 multiple trackign libraries and even logging to just OSLog.
 
