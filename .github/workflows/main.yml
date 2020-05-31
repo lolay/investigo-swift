@@ -1,0 +1,22 @@
+name: Continuous
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: macos-10.15
+
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Before Script
+      run: |
+        sudo xcode-select -switch /Applications/Xcode_11.5.app
+        xcodebuild -version
+    - name: Build
+      run: xcodebuild -workspace LolayInvestigo.xcworkspace -scheme LolayInvestigo -sdk iphoneos13.5 clean build test | xcpretty
