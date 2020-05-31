@@ -1,4 +1,4 @@
-name: Continuous
+name: CI
 
 on:
   push:
@@ -17,6 +17,6 @@ jobs:
     - name: Before Script
       run: |
         sudo xcode-select -switch /Applications/Xcode_11.5.app
-        xcodebuild -version
+        xcodebuild -version -sdk
     - name: Build
       run: xcodebuild -workspace LolayInvestigo.xcworkspace -scheme LolayInvestigo -sdk iphoneos13.5 clean build test | xcpretty
