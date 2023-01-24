@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -15,8 +15,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Xcode Select
-      run: sudo xcode-select -switch /Applications/Xcode_11.5.app
+      run: sudo xcode-select -switch /Applications/Xcode_14.2.app
     - name: Xcode Versions
       run: xcodebuild -version -sdk
     - name: Build and Test
-      run: xcodebuild -workspace LolayInvestigo.xcworkspace -scheme LolayInvestigo -sdk iphoneos13.5 -destination "platform=iOS Simulator,OS=13.5,name=iPhone SE (2nd generation)" clean build test | xcpretty
+      run: xcodebuild -workspace LolayInvestigo.xcworkspace -scheme LolayInvestigo -sdk iphoneos16.2 -destination "platform=iOS Simulator,OS=16.2,name=iPhone 14" clean build test | xcpretty

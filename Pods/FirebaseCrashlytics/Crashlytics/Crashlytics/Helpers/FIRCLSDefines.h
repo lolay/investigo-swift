@@ -14,20 +14,17 @@
 
 #pragma once
 
-#include "TargetConditionals.h"
+#include <TargetConditionals.h>
 
 // macro trickiness
-#define STR_HELPER(x) #x
-#define STR(x) STR_HELPER(x)
 #define CONCAT_EXPANDED(a, b) a##b
 #define CONCAT(a, b) CONCAT_EXPANDED(a, b)
 
 // These macros generate a function to force a symbol for the containing .o, to work around an issue
 // where strip will not strip debug information without a symbol to strip.
 #define DUMMY_FUNCTION_NAME(x) CONCAT(fircls_strip_this_, x)
-#define INJECT_STRIP_SYMBOL(x)        \
-  void DUMMY_FUNCTION_NAME(x)(void) { \
-  }
+#define INJECT_STRIP_SYMBOL(x) \
+  void DUMMY_FUNCTION_NAME(x)(void) {}
 
 // These make some target os types available to previous versions of xcode that do not yet have them
 // in their SDKs
@@ -43,13 +40,16 @@
 #define TARGET_OS_TV 0
 #endif
 
+// Whether MetricKit should be supported
+#if defined(__IPHONE_15_0)
+#define CLS_METRICKIT_SUPPORTED (__has_include(<MetricKit/MetricKit.h>) && TARGET_OS_IOS)
+#else
+#define CLS_METRICKIT_SUPPORTED 0
+#endif
+
 // These help compile based on availability of technologies/frameworks.
 #define CLS_TARGET_OS_OSX (TARGET_OS_MAC && !TARGET_OS_IPHONE)
 #define CLS_TARGET_OS_HAS_UIKIT (TARGET_OS_IOS || TARGET_OS_TV)
-
-#define CLS_SDK_DISPLAY_VERSION STR(DISPLAY_VERSION)
-
-#define CLS_SDK_GENERATOR_NAME (STR(CLS_SDK_NAME) "/" CLS_SDK_DISPLAY_VERSION)
 
 // arch definitions
 #if defined(__arm__) || defined(__arm64__) || defined(__arm64e__)

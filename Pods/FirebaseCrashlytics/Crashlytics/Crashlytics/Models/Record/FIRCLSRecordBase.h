@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Google
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +25,7 @@
 @interface FIRCLSRecordBase : NSObject
 
 /**
- * Mark the default initializer as unavailable so  the subclasses do not have to add the same line
+ * Mark the default initializer as unavailable so the subclasses do not have to add the same line
  **/
 - (instancetype)init NS_UNAVAILABLE;
 

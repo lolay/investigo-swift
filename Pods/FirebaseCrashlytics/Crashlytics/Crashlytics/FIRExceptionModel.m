@@ -1,4 +1,4 @@
-// Copyright 2020 Google
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,12 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#import "FIRExceptionModel.h"
+#import "Crashlytics/Crashlytics/Public/FirebaseCrashlytics/FIRExceptionModel.h"
 
 @interface FIRExceptionModel ()
 
 @property(nonatomic, copy) NSString *name;
 @property(nonatomic, copy) NSString *reason;
+@property(nonatomic) BOOL isFatal;
+@property(nonatomic) BOOL onDemand;
 
 @end
 

@@ -1,5 +1,5 @@
 //
-//  Copyright © 2020 Lolay, Inc.
+//  Copyright © 2020, 2023 Lolay, Inc.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -48,12 +48,11 @@ public class LolayFirebaseTracker: LolayBaseTracker {
     }
     
     override public func logPage(_ name: String) {
-        Analytics.setScreenName(name, screenClass: name)
-        Analytics.logEvent(name + "_page", parameters: nil)
+        Analytics.logEvent(AnalyticsEventScreenView, parameters: [AnalyticsParameterScreenName: name + "_page"])
     }
     
     override public func logPage(_ name: String, withDictionary dictionary: [String:String]) {
-        Analytics.setScreenName(name, screenClass: name)
-        Analytics.logEvent(name + "_page", parameters: dictionary)
+        let parameters = dictionary.merging([AnalyticsParameterScreenName: name + "_page"]) { _, new in new }
+        Analytics.logEvent(AnalyticsParameterScreenName, parameters: parameters)
     }
 }
