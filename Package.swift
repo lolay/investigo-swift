@@ -32,7 +32,6 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            name: "Firebase",
             url: "https://github.com/firebase/firebase-ios-sdk.git",
             .upToNextMajor(from: "10.4.0")
         )
@@ -41,8 +40,8 @@ let package = Package(
         .target(
             name: "LolayInvestigo",
             dependencies: [
-                .product(name: "FirebaseAnalytics", package: "Firebase"),
-                .product(name: "FirebaseCrashlytics", package: "Firebase")
+                .product(name: "FirebaseAnalytics", package: "firebase-ios-sdk"),
+                .product(name: "FirebaseCrashlytics", package: "firebase-ios-sdk")
             ]
         ),
         .testTarget(
