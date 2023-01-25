@@ -1,6 +1,0 @@
-framework module Pods_LolayInvestigo {
-  umbrella header "Pods-LolayInvestigo-umbrella.h"
-
-  export *
-  module * { export * }
-}
