@@ -85,7 +85,7 @@ public class LolayMultipleTracker: LolayBaseTracker {
     
     override public func logPage(_ name: String, withDictionary dictionary: [String:String]) {
         for tracker in trackers {
-            tracker.logEvent(name, withDictionary: dictionary)
+            tracker.logPage(name, withDictionary: dictionary)
         }
     }
     
