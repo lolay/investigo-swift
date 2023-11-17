@@ -33,7 +33,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/firebase/firebase-ios-sdk.git",
-            .upToNextMajor(from: "10.4.0")
+            .upToNextMajor(from: "10.18.0")
         )
     ],
     targets: [
