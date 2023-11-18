@@ -1,4 +1,4 @@
-// swift-tools-version: 5.7
+// swift-tools-version: 5.9
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 //
 //  Copyright © 2023 Lolay, Inc.
@@ -21,9 +21,11 @@ import PackageDescription
 let package = Package(
     name: "LolayInvestigo",
     platforms: [
-        .iOS(.v16),
-        .watchOS(.v9),
-        .tvOS(.v16)
+        .iOS(.v17),
+        .watchOS(.v10),
+        .tvOS(.v17),
+        .visionOS(.v1),
+        .macCatalyst(.v17)
     ],
     products: [
         .library(
