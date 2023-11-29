@@ -53,6 +53,6 @@ public class LolayFirebaseTracker: LolayBaseTracker {
     
     override public func logPage(_ name: String, withDictionary dictionary: [String:String]) {
         let parameters = dictionary.merging([AnalyticsParameterScreenName: name + "_page"]) { _, new in new }
-        Analytics.logEvent(AnalyticsParameterScreenName, parameters: parameters)
+        Analytics.logEvent(AnalyticsEventScreenView, parameters: parameters)
     }
 }
