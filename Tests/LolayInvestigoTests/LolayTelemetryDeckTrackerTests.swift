@@ -1,14 +1,41 @@
-import XCTest
+import Foundation
+import Testing
 @testable import LolayInvestigo
 
-class LolayTelemetryDeckTrackerTests: XCTestCase {
-    var tracker = LolayTelemetryDeckTracker(appID: "00000000-0000-0000-0000-000000000000", globalScope: "App")
+@Suite("LolayTelemetryDeckTracker")
+struct LolayTelemetryDeckTrackerTests {
+    static let dummyAppID = "00000000-0000-0000-0000-000000000000"
 
-    enum TestError: Error {
-        case test
+    @Test func defaultNamingIsDotNotation() {
+        let tracker = LolayTelemetryDeckTracker(appID: Self.dummyAppID, globalScope: "App")
+        let name = tracker.resolveEventName(scope: "Search", action: "performed")
+        #expect(name == "App.Search.performed")
     }
 
-    func testProperties() {
+    @Test func customSnakeCaseNaming() {
+        let tracker = LolayTelemetryDeckTracker(
+            appID: Self.dummyAppID,
+            naming: LolaySnakeCaseNaming(),
+            globalScope: "App"
+        )
+        let name = tracker.resolveEventName(scope: "Search", action: "performed")
+        #expect(name == "app_search_performed")
+    }
+
+    @Test func withoutGlobalScope() {
+        let tracker = LolayTelemetryDeckTracker(appID: Self.dummyAppID)
+        let name = tracker.resolveEventName(scope: "Lifecycle", action: "launched")
+        #expect(name == "Lifecycle.launched")
+    }
+
+    @Test func multiLevelScope() {
+        let tracker = LolayTelemetryDeckTracker(appID: Self.dummyAppID, globalScope: "App")
+        let name = tracker.resolveEventName(scope: ["Search", "Result"], action: "opened")
+        #expect(name == "App.Search.Result.opened")
+    }
+
+    @Test func properties() {
+        let tracker = LolayTelemetryDeckTracker(appID: Self.dummyAppID)
         tracker.setIdentifier("user-123")
         tracker.setEmail("noreply@lolay.com")
         tracker.setName("Some Name")
@@ -18,23 +45,27 @@ class LolayTelemetryDeckTrackerTests: XCTestCase {
         tracker.removeGlobalParameterForKey("A")
     }
 
-    func testFlatEvents() {
+    @Test func flatEvents() {
+        let tracker = LolayTelemetryDeckTracker(appID: Self.dummyAppID)
         tracker.logEvent("Name Only")
         tracker.logEvent("With Dictionary", withDictionary: ["A": "1"])
     }
 
-    func testPages() {
+    @Test func pages() {
+        let tracker = LolayTelemetryDeckTracker(appID: Self.dummyAppID)
         tracker.logPage("Name Only")
         tracker.logPage("With Dictionary", withDictionary: ["A": "1"])
     }
 
-    func testErrors() {
+    @Test func errors() {
+        let tracker = LolayTelemetryDeckTracker(appID: Self.dummyAppID)
         tracker.logError(TestError.test)
         tracker.logError(NSError(domain: "TestDomain", code: 42))
         tracker.logException(NSException(name: .genericException, reason: "test reason"))
     }
 
-    func testStructuredEvents() {
+    @Test func structuredEvents() {
+        let tracker = LolayTelemetryDeckTracker(appID: Self.dummyAppID)
         tracker.logEvent(scope: "Lifecycle", action: "launched")
         tracker.logEvent(scope: "Search", action: "performed",
                          parameters: ["source": "search", "type": "keyword"])
@@ -43,26 +74,14 @@ class LolayTelemetryDeckTrackerTests: XCTestCase {
                          numericValue: nil)
     }
 
-    func testStructuredEventWithNumericValue() {
+    @Test func structuredEventWithNumericValue() {
+        let tracker = LolayTelemetryDeckTracker(appID: Self.dummyAppID)
         tracker.logEvent(scope: "Index", action: "snapshot",
-                         parameters: ["parentContentType": "public.image",
-                                      "contentType": "public.png",
-                                      "sizeBucket": "small"],
+                         parameters: ["contentType": "public.png"],
                          numericValue: 47418)
     }
+}
 
-    func testDefaultNamingIsDotNotation() {
-        let name = tracker.resolveEventName(scope: "Search", action: "performed")
-        XCTAssertEqual(name, "App.Search.performed")
-    }
-
-    func testCustomNamingStrategy() {
-        let snakeTracker = LolayTelemetryDeckTracker(
-            appID: "00000000-0000-0000-0000-000000000000",
-            naming: LolaySnakeCaseNaming(),
-            globalScope: "App"
-        )
-        let name = snakeTracker.resolveEventName(scope: "Search", action: "performed")
-        XCTAssertEqual(name, "app_search_performed")
-    }
+private enum TestError: Error {
+    case test
 }

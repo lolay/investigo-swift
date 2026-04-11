@@ -1,21 +1,43 @@
 import Foundation
 @testable import LolayInvestigo
 
-struct RecordedEvent {
+struct RecordedEvent: Equatable {
     let name: String
     let parameters: [String: String]
     let numericValue: Double?
 }
 
+struct RecordedError: Equatable {
+    let description: String
+    let domain: String?
+    let code: Int?
+}
+
 class RecordingTracker: LolayBaseTracker {
     var events: [RecordedEvent] = []
     var pages: [RecordedEvent] = []
-    var errors: [String] = []
+    var errors: [RecordedError] = []
+    var exceptions: [String] = []
     var identifiers: [String] = []
+    var versions: [String] = []
+    var emails: [String] = []
+    var names: [String] = []
     var globalParams: [String: String] = [:]
 
     override func setIdentifier(_ identifier: String) {
         identifiers.append(identifier)
+    }
+
+    override func setVersion(_ version: String) {
+        versions.append(version)
+    }
+
+    override func setEmail(_ email: String) {
+        emails.append(email)
+    }
+
+    override func setName(_ name: String) {
+        names.append(name)
     }
 
     override func setGlobalParameters(_ globalParameters: [String: String]) {
@@ -47,11 +69,15 @@ class RecordingTracker: LolayBaseTracker {
     }
 
     override func logError(_ error: Error) {
-        errors.append(error.localizedDescription)
+        errors.append(RecordedError(description: error.localizedDescription, domain: nil, code: nil))
     }
 
     override func logError(_ error: NSError) {
-        errors.append(error.localizedDescription)
+        errors.append(RecordedError(description: error.localizedDescription, domain: error.domain, code: error.code))
+    }
+
+    override func logException(_ exception: NSException) {
+        exceptions.append(exception.name.rawValue)
     }
 
     override func logEvent(scope: LolayTrackerScope, action: String) {
