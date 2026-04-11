@@ -1,5 +1,5 @@
 //
-//  Copyright © 2020, 2023, 2026 Lolay, Inc.
+//  Copyright © 2026 Lolay, Inc.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -14,4 +14,24 @@
 //  limitations under the License.
 //
 
-public class LolayNoTracker: LolayBaseTracker {}
+import Foundation
+
+public struct LolayTrackerScope: ExpressibleByStringLiteral, ExpressibleByArrayLiteral, Sendable {
+    public let components: [String]
+
+    public init(stringLiteral value: String) {
+        self.components = [value]
+    }
+
+    public init(arrayLiteral elements: String...) {
+        self.components = elements
+    }
+
+    public init(_ components: String...) {
+        self.components = components
+    }
+
+    public init(_ components: [String]) {
+        self.components = components
+    }
+}

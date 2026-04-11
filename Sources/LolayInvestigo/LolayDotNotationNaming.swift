@@ -1,5 +1,5 @@
 //
-//  Copyright © 2020, 2023, 2026 Lolay, Inc.
+//  Copyright © 2026 Lolay, Inc.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -14,4 +14,15 @@
 //  limitations under the License.
 //
 
-public class LolayNoTracker: LolayBaseTracker {}
+import Foundation
+
+/// Dot-joined naming: scope components UpperCamelCase, action lowerCamelCase.
+/// Example: scope ["Search", "Result"], action "opened" → "Search.Result.opened"
+public struct LolayDotNotationNaming: LolayTrackerNamingStrategy {
+    public init() {}
+
+    public func formatEventName(scope: LolayTrackerScope, action: String) -> String {
+        let parts = scope.components + [action]
+        return parts.joined(separator: ".")
+    }
+}

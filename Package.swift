@@ -1,7 +1,7 @@
-// swift-tools-version: 5.9
+// swift-tools-version: 6.1
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 //
-//  Copyright © 2023 Lolay, Inc.
+//  Copyright © 2026 Lolay, Inc.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -21,11 +21,12 @@ import PackageDescription
 let package = Package(
     name: "LolayInvestigo",
     platforms: [
-        .iOS(.v17),
-        .watchOS(.v10),
-        .tvOS(.v17),
-        .visionOS(.v1),
-        .macCatalyst(.v17)
+        .iOS(.v18),
+        .watchOS(.v11),
+        .tvOS(.v18),
+        .visionOS(.v2),
+        .macCatalyst(.v18),
+        .macOS(.v15)
     ],
     products: [
         .library(
@@ -35,7 +36,11 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/firebase/firebase-ios-sdk.git",
-            .upToNextMajor(from: "10.18.0")
+            .upToNextMajor(from: "11.0.0")
+        ),
+        .package(
+            url: "https://github.com/TelemetryDeck/SwiftSDK.git",
+            .upToNextMajor(from: "2.0.0")
         )
     ],
     targets: [
@@ -43,7 +48,8 @@ let package = Package(
             name: "LolayInvestigo",
             dependencies: [
                 .product(name: "FirebaseAnalytics", package: "firebase-ios-sdk"),
-                .product(name: "FirebaseCrashlytics", package: "firebase-ios-sdk")
+                .product(name: "FirebaseCrashlytics", package: "firebase-ios-sdk"),
+                .product(name: "TelemetryDeck", package: "SwiftSDK")
             ]
         ),
         .testTarget(
@@ -51,5 +57,5 @@ let package = Package(
             dependencies: ["LolayInvestigo"]
         ),
     ],
-    swiftLanguageVersions: [.v5]
+    swiftLanguageModes: [.v6]
 )

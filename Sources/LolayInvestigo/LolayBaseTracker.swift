@@ -1,5 +1,5 @@
 //
-//  Copyright © 2020, 2023 Lolay, Inc.
+//  Copyright © 2020, 2023, 2026 Lolay, Inc.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -16,19 +16,62 @@
 
 import Foundation
 
-public class LolayBaseTracker: LolayTracker {
-    public func setIdentifier(_ identifier: String) { }
-    public func setVersion(_ version: String) { }
-    public func setEmail(_ email: String) { }
-    public func setName(_ name: String) { }
-    public func setGlobalParameters(_ globalParameters: [String:String]) { }
-    public func setGlobalParameter(_ value: String, forKey key:String) { }
-    public func removeGlobalParameterForKey(_ key:String) { }
-    public func logEvent(_ name: String) { }
-    public func logEvent(_ name: String, withDictionary dictionary: [String:String]) { }
-    public func logPage(_ name: String) { }
-    public func logPage(_ name: String, withDictionary dictionary: [String:String]) { }
-    public func logError(_ error: Error) { }
-    public func logError(_ error: NSError) { }
-    public func logException(_ exception: NSException) { }
+open class LolayBaseTracker: LolayTracker {
+    public let naming: LolayTrackerNamingStrategy
+    public var globalScope: LolayTrackerScope?
+
+    public init(naming: LolayTrackerNamingStrategy = LolayDotNotationNaming(),
+                globalScope: LolayTrackerScope? = nil) {
+        self.naming = naming
+        self.globalScope = globalScope
+    }
+
+    // MARK: - Identity & global parameters (no-ops)
+
+    open func setIdentifier(_ identifier: String) {}
+    open func setVersion(_ version: String) {}
+    open func setEmail(_ email: String) {}
+    open func setName(_ name: String) {}
+    open func setGlobalParameters(_ globalParameters: [String: String]) {}
+    open func setGlobalParameter(_ value: String, forKey key: String) {}
+    open func removeGlobalParameterForKey(_ key: String) {}
+
+    // MARK: - Flat string event API (no-ops)
+
+    open func logEvent(_ name: String) {}
+    open func logEvent(_ name: String, withDictionary dictionary: [String: String]) {}
+
+    // MARK: - Deprecated (no-ops)
+
+    @available(*, deprecated, message: "Use logEvent(scope:action:) with a screen scope instead")
+    open func logPage(_ name: String) {}
+    @available(*, deprecated, message: "Use logEvent(scope:action:parameters:) with a screen scope instead")
+    open func logPage(_ name: String, withDictionary dictionary: [String: String]) {}
+
+    // MARK: - Error logging (no-ops)
+
+    open func logError(_ error: Error) {}
+    open func logError(_ error: NSError) {}
+    open func logException(_ exception: NSException) {}
+
+    // MARK: - Structured scope + action API (no-ops)
+
+    open func logEvent(scope: LolayTrackerScope, action: String) {}
+    open func logEvent(scope: LolayTrackerScope, action: String,
+                       parameters: [String: String]) {}
+    open func logEvent(scope: LolayTrackerScope, action: String,
+                       parameters: [String: String], numericValue: Double?) {}
+
+    // MARK: - Helpers
+
+    /// Prepends globalScope (if set) to the given scope, then formats via the naming strategy.
+    public func resolveEventName(scope: LolayTrackerScope, action: String) -> String {
+        let fullScope: LolayTrackerScope
+        if let global = globalScope {
+            fullScope = LolayTrackerScope(global.components + scope.components)
+        } else {
+            fullScope = scope
+        }
+        return naming.formatEventName(scope: fullScope, action: action)
+    }
 }

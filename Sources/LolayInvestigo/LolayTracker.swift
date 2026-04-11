@@ -1,5 +1,5 @@
 //
-//  Copyright © 2020, 2023 Lolay, Inc.
+//  Copyright © 2020, 2023, 2026 Lolay, Inc.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -17,18 +17,43 @@
 import Foundation
 
 public protocol LolayTracker {
+    // MARK: - Identity & global parameters (existing)
+
     func setIdentifier(_ identifier: String)
     func setVersion(_ version: String)
     func setEmail(_ email: String)
     func setName(_ name: String)
-    func setGlobalParameters(_ globalParameters: [String:String])
-    func setGlobalParameter(_ value: String, forKey key:String)
-    func removeGlobalParameterForKey(_ key:String)
+    func setGlobalParameters(_ globalParameters: [String: String])
+    func setGlobalParameter(_ value: String, forKey key: String)
+    func removeGlobalParameterForKey(_ key: String)
+
+    // MARK: - Flat string event API (existing)
+
     func logEvent(_ name: String)
-    func logEvent(_ name: String, withDictionary dictionary: [String:String])
+    func logEvent(_ name: String, withDictionary dictionary: [String: String])
+
+    // MARK: - Deprecated
+
+    @available(*, deprecated, message: "Use logEvent(scope:action:) with a screen scope instead and action of -page")
     func logPage(_ name: String)
-    func logPage(_ name: String, withDictionary dictionary: [String:String])
+    @available(*, deprecated, message: "Use logEvent(scope:action:parameters:) with a screen scope instead and action of -page")
+    func logPage(_ name: String, withDictionary dictionary: [String: String])
+
+    // MARK: - Error logging (existing)
+
     func logError(_ error: Error)
     func logError(_ error: NSError)
     func logException(_ exception: NSException)
+
+    // MARK: - Global scope (new in v6)
+
+    var globalScope: LolayTrackerScope? { get set }
+
+    // MARK: - Structured scope + action API (new in v6)
+
+    func logEvent(scope: LolayTrackerScope, action: String)
+    func logEvent(scope: LolayTrackerScope, action: String,
+                  parameters: [String: String])
+    func logEvent(scope: LolayTrackerScope, action: String,
+                  parameters: [String: String], numericValue: Double?)
 }

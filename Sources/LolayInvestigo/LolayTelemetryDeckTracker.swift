@@ -1,5 +1,5 @@
 //
-//  Copyright © 2020, 2023, 2026 Lolay, Inc.
+//  Copyright © 2026 Lolay, Inc.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -15,87 +15,109 @@
 //
 
 import Foundation
-import FirebaseCrashlytics
+import TelemetryDeck
 
-public class LolayCrashlyticsTracker: LolayBaseTracker {
-    override public init(naming: LolayTrackerNamingStrategy = LolaySnakeCaseNaming(),
-                         globalScope: LolayTrackerScope? = nil) {
+public class LolayTelemetryDeckTracker: LolayBaseTracker {
+    private var storedGlobalParameters: [String: String] = [:]
+
+    public init(appID: String,
+                naming: LolayTrackerNamingStrategy = LolayDotNotationNaming(),
+                globalScope: LolayTrackerScope? = nil) {
         super.init(naming: naming, globalScope: globalScope)
+        let config = TelemetryDeck.Config(appID: appID)
+        TelemetryDeck.initialize(config: config)
     }
 
-    // MARK: - Identity & global parameters
+    // MARK: - Identity
 
     override public func setIdentifier(_ identifier: String) {
-        Crashlytics.crashlytics().setUserID(identifier)
+        TelemetryDeck.updateDefaultUserID(to: identifier)
     }
 
+    // MARK: - Global parameters
+
     override public func setGlobalParameters(_ globalParameters: [String: String]) {
-        let crashlytics = Crashlytics.crashlytics()
-        for (key, value) in globalParameters {
-            crashlytics.setCustomValue(value, forKey: key)
-        }
+        storedGlobalParameters = globalParameters
     }
 
     override public func setGlobalParameter(_ value: String, forKey key: String) {
-        Crashlytics.crashlytics().setCustomValue(value, forKey: key)
+        storedGlobalParameters[key] = value
     }
 
     override public func removeGlobalParameterForKey(_ key: String) {
-        Crashlytics.crashlytics().setCustomValue("", forKey: key)
+        storedGlobalParameters.removeValue(forKey: key)
+    }
+
+    private func mergedParameters(_ parameters: [String: String] = [:]) -> [String: String] {
+        storedGlobalParameters.merging(parameters) { _, perEvent in perEvent }
     }
 
     // MARK: - Flat string event API
 
     override public func logEvent(_ name: String) {
-        Crashlytics.crashlytics().log(name)
+        TelemetryDeck.signal(name, parameters: mergedParameters())
     }
 
     override public func logEvent(_ name: String, withDictionary dictionary: [String: String]) {
-        Crashlytics.crashlytics().log(name + " " + dictionary.description)
+        TelemetryDeck.signal(name, parameters: mergedParameters(dictionary))
     }
 
     // MARK: - Deprecated
 
     @available(*, deprecated, message: "Use logEvent(scope:action:) with a screen scope instead")
     override public func logPage(_ name: String) {
-        Crashlytics.crashlytics().log(name + "-page")
+        TelemetryDeck.signal(name + ".page", parameters: mergedParameters())
     }
 
     @available(*, deprecated, message: "Use logEvent(scope:action:parameters:) with a screen scope instead")
     override public func logPage(_ name: String, withDictionary dictionary: [String: String]) {
-        Crashlytics.crashlytics().log(name + "-page" + " " + dictionary.description)
+        TelemetryDeck.signal(name + ".page", parameters: mergedParameters(dictionary))
     }
 
     // MARK: - Error logging
 
     override public func logError(_ error: Error) {
-        Crashlytics.crashlytics().record(error: error)
+        TelemetryDeck.signal("error", parameters: mergedParameters([
+            "errorDescription": error.localizedDescription
+        ]))
     }
 
     override public func logError(_ error: NSError) {
-        Crashlytics.crashlytics().record(error: error)
+        TelemetryDeck.signal("error", parameters: mergedParameters([
+            "errorDomain": error.domain,
+            "errorCode": String(error.code),
+            "errorDescription": error.localizedDescription
+        ]))
+    }
+
+    override public func logException(_ exception: NSException) {
+        var params: [String: String] = ["exceptionName": exception.name.rawValue]
+        if let reason = exception.reason {
+            params["exceptionReason"] = reason
+        }
+        TelemetryDeck.signal("exception", parameters: mergedParameters(params))
     }
 
     // MARK: - Structured scope + action API
 
     override public func logEvent(scope: LolayTrackerScope, action: String) {
         let name = resolveEventName(scope: scope, action: action)
-        Crashlytics.crashlytics().log(name)
+        TelemetryDeck.signal(name, parameters: mergedParameters())
     }
 
     override public func logEvent(scope: LolayTrackerScope, action: String,
                                   parameters: [String: String]) {
         let name = resolveEventName(scope: scope, action: action)
-        Crashlytics.crashlytics().log(name + " " + parameters.description)
+        TelemetryDeck.signal(name, parameters: mergedParameters(parameters))
     }
 
     override public func logEvent(scope: LolayTrackerScope, action: String,
                                   parameters: [String: String], numericValue: Double?) {
         let name = resolveEventName(scope: scope, action: action)
         if let numericValue {
-            Crashlytics.crashlytics().log(name + " " + parameters.description + " numericValue=\(numericValue)")
+            TelemetryDeck.signal(name, parameters: mergedParameters(parameters), floatValue: numericValue)
         } else {
-            Crashlytics.crashlytics().log(name + " " + parameters.description)
+            TelemetryDeck.signal(name, parameters: mergedParameters(parameters))
         }
     }
 }
