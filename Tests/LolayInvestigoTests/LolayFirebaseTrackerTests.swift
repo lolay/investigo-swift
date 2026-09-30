@@ -14,6 +14,7 @@
 //  limitations under the License.
 //
 
+#if canImport(FirebaseAnalytics)
 import Testing
 @testable import LolayInvestigo
 
@@ -65,3 +66,4 @@ struct LolayFirebaseTrackerTests {
                          parameters: ["type": "keyword"], numericValue: 42)
     }
 }
+#endif

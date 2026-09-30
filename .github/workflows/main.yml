@@ -8,15 +8,15 @@ on:
 
 jobs:
   build:
-    runs-on: macos-13
+    runs-on: xcode-27
 
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v7
     - name: Xcode Select
-      run: sudo xcode-select -switch /Applications/Xcode_15.0.1.app
+      run: sudo xcode-select -switch /Applications/Xcode_27.0.app
     - name: Xcode Versions
       run: xcodebuild -version -sdk
     - name: Build and Test
-      run: xcodebuild -scheme LolayInvestigo -sdk iphonesimulator17.0 -destination "platform=iOS Simulator,OS=17.0.1,name=iPhone 15" clean build test | xcpretty
+      run: set -o pipefail && xcodebuild -scheme LolayInvestigo -sdk iphonesimulator27.0 -destination "platform=iOS Simulator,OS=27.0,name=iPhone 17" clean build test | xcbeautify
