@@ -14,6 +14,8 @@
 //  limitations under the License.
 //
 
+// FirebaseAnalytics ships only for iOS, macOS, Mac Catalyst and tvOS.
+#if canImport(FirebaseAnalytics)
 import FirebaseAnalytics
 
 public class LolayFirebaseTracker: LolayBaseTracker {
@@ -89,3 +91,4 @@ public class LolayFirebaseTracker: LolayBaseTracker {
         }
     }
 }
+#endif
